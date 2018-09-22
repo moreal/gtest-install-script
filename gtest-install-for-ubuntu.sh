@@ -1,6 +1,6 @@
 function isInstalledPackage
 {
-    apt list --installed | grep $1
+    apt list --installed | grep $1 > /dev/null 2>&1;
 }
 
 if ! isInstalledPackage cmake ; then
